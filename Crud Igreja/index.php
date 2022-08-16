@@ -45,6 +45,8 @@
                         break;
                         case "salvar":
                             include("salvar-igreja.php");
+                        case "editar":
+                            include("editar-igreja.php");
                         break;
                         default:
                             print "<h1>Bem vindos!</h1>";

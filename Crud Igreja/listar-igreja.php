@@ -14,6 +14,7 @@
             print "<th>Endereço</th>";
             print "<th>Website</th>";
             print "<th>Foto</th>";
+            print "<th>Ações</th>";
             print "</tr>";
         while($row = $res->fetch_object()){
             print "<tr>";
@@ -22,6 +23,11 @@
             print "<td>".$row->Endereco."</td>";
             print "<td>".$row->Website."</td>";
             print "<td>".$row->Foto."</td>";
+            print "<td>
+                    <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
+                    
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Excluir</button>
+                </td>";
             print "</tr>";
         }
         print "</table>";
