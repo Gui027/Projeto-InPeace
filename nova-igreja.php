@@ -1,5 +1,5 @@
 <h1>Nova Igreja</h1>
-<form action="?page=salvar" method="POST">
+<form action="?page=salvar" method="POST" enctype="multipart/form-data"> 
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
         <label>Nome</label>
@@ -15,7 +15,7 @@
     </div>
     <div class="mb-3">
         <label>Foto da igreja</label>
-        <input type="text" name="foto" class="form-control">
+        <input type="file" name="foto" class="form-control">
     </div>
     <div class="mb-3">
         <button type="submit" class="btn btn-primary">Cadastrar</button>

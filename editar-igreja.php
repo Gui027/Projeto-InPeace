@@ -4,7 +4,7 @@
     $res = $conn->query($sql);
     $row = $res->fetch_object();
 ?>
-<form action="?page=salvar" method="POST">
+<form action="?page=salvar" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="acao" value="editar">
     <input type="hidden" name="id" value="<?php print $row->id; ?>">
     <div class="mb-3">
@@ -21,7 +21,7 @@
     </div>
     <div class="mb-3">
         <label>Foto da igreja</label>
-        <input type="text" name="foto" value="<?php print $row->Foto; ?>" class="form-control">
+        <input type="file" name="foto" value="<?php print $row->Foto; ?>" class="form-control">
     </div>
     <div class="mb-3">
         <button type="submit" class="btn btn-primary">Editar</button>

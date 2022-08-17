@@ -4,7 +4,7 @@
             $nome = $_POST["nome"];
             $endereco = $_POST["endereco"];
             $website = $_POST["website"];
-            $foto = $_POST["foto"];
+            $foto = $_FILES["foto"];
 
             $sql = "INSERT INTO Igreja (Nome, Endereco, Website, Foto) VALUES ('{$nome}', '{$endereco}','{$website}','{$foto}')";
 
@@ -23,7 +23,7 @@
             $nome = $_POST["nome"];
             $endereco = $_POST["endereco"];
             $website = $_POST["website"];
-            $foto = $_POST["foto"];
+            $foto = $_FILES["foto"];
 
             $sql = "UPDATE Igreja SET Nome='{$nome}', Endereco='{$endereco}', Website='{$website}', Foto='{$foto}' WHERE id=".$_REQUEST["id"];
 

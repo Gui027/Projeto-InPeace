@@ -16,7 +16,7 @@
             print "<th>Foto</th>";
             print "<th>Ações</th>";
             print "</tr>";
-        while($row = $res->fetch_object()){
+        while($row = $res->fetch_object()){ // CRIAR LINHA PARA CADA ARQUIVO QUE EXISTE
             print "<tr>";
             print "<td>".$row->id."</td>";
             print "<td>".$row->Nome."</td>";
